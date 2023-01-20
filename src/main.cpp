@@ -2,7 +2,7 @@
 
 // 17 examples so far.
 
-void infinite_while_1() {
+void infinite_while_const() {
     while (1) {
     
     }
