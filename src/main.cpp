@@ -1,6 +1,6 @@
 #include <cstddef>
 
-// 17 examples so far.
+// 19 examples so far.
 
 void infinite_while_const() {
     while (1) {
@@ -54,7 +54,7 @@ void potentially_infinite_while_not_true() {
     }
 }
 
-void potentially_infinite_while_true_explicit() {
+void potentially_infinite_explicit_while_true() {
     bool b = true;
 
     while (b ==  true) {
@@ -62,7 +62,7 @@ void potentially_infinite_while_true_explicit() {
     }
 }
 
-void potentially_infinite_while_not_true_explicit() {
+void potentially_infinite_explicit_while_not_true() {
     bool b = false;
 
     while (b != true) {
@@ -100,7 +100,7 @@ void explicit_infinite_less_than_or_equal_to_increment_for() {
     }
 }
 
-void explicit_infinite_greater_than_or_equal_increment_for() {
+void explicit_infinite_greater_than_or_equal_to_increment_for() {
     for (int i = 10; i >= 10; i++) {
         if (i == __INT_MAX__) {
             i == 10;
@@ -131,10 +131,17 @@ void implicit_finite_increment_for() {
     }
 }
 
-void infinite_const_do_while() {
+void infinite_do_while_const() {
     do {
  
     } while(1);
+}
+
+void potentially_infinite_do_while_var() {
+    int x = 0;
+    do {
+        //x = NULL;
+    } while(x);
 }
 
 int main() {
